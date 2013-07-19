@@ -1,0 +1,571 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8A081F9F16C9858300423D16 /* WeatherForecastLocationForm.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A081F9E16C9858300423D16 /* WeatherForecastLocationForm.m */; };
+		8A0F4D1816D702340047A22D /* GunProfileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A0F4D1716D702340047A22D /* GunProfileManager.m */; };
+		8A0F4D1B16D702610047A22D /* AddEditGunProfileForm.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A0F4D1A16D702610047A22D /* AddEditGunProfileForm.m */; };
+		8A0F4D1E16D714B10047A22D /* XMLFileFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A0F4D1D16D714B00047A22D /* XMLFileFunctions.m */; };
+		8A78558516D6D9790002BF64 /* GunProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A78558416D6D9790002BF64 /* GunProfile.m */; };
+		8A79D81E16D334620056F400 /* DayForecast.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A79D81D16D334620056F400 /* DayForecast.m */; };
+		8A79D82016D37E3F0056F400 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A79D81F16D37E3F0056F400 /* CoreLocation.framework */; };
+		8A8015B516DC2CFE0094418C /* WeatherForecastResultsTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8015B416DC2CFE0094418C /* WeatherForecastResultsTable.m */; };
+		8AB6981E16C84F560007AD8B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AB6981D16C84F560007AD8B /* UIKit.framework */; };
+		8AB6982016C84F560007AD8B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AB6981F16C84F560007AD8B /* Foundation.framework */; };
+		8AB6982216C84F560007AD8B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AB6982116C84F560007AD8B /* CoreGraphics.framework */; };
+		8AB6982816C84F560007AD8B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8AB6982616C84F560007AD8B /* InfoPlist.strings */; };
+		8AB6982A16C84F560007AD8B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AB6982916C84F560007AD8B /* main.m */; };
+		8AB6982E16C84F560007AD8B /* HuntersAssistantAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AB6982D16C84F560007AD8B /* HuntersAssistantAppDelegate.m */; };
+		8AB6983016C84F560007AD8B /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AB6982F16C84F560007AD8B /* Default.png */; };
+		8AB6983216C84F560007AD8B /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AB6983116C84F560007AD8B /* Default@2x.png */; };
+		8AB6983416C84F560007AD8B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AB6983316C84F560007AD8B /* Default-568h@2x.png */; };
+		8AB6983716C84F560007AD8B /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AB6983516C84F560007AD8B /* MainStoryboard.storyboard */; };
+		8AB6983A16C84F560007AD8B /* HuntersAssistantViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AB6983916C84F560007AD8B /* HuntersAssistantViewController.m */; };
+		8AB6984216C84F560007AD8B /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AB6984116C84F560007AD8B /* SenTestingKit.framework */; };
+		8AB6984316C84F560007AD8B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AB6981D16C84F560007AD8B /* UIKit.framework */; };
+		8AB6984416C84F560007AD8B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AB6981F16C84F560007AD8B /* Foundation.framework */; };
+		8AB6984C16C84F560007AD8B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8AB6984A16C84F560007AD8B /* InfoPlist.strings */; };
+		8AB6984F16C84F560007AD8B /* HuntersAssistantTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AB6984E16C84F560007AD8B /* HuntersAssistantTests.m */; };
+		8AB9668F16E5174300984102 /* TrajectoryCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AB9668E16E5174300984102 /* TrajectoryCalculator.m */; };
+		8AB9669216E5674E00984102 /* TrajectoryForm.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AB9669116E5674E00984102 /* TrajectoryForm.m */; };
+		8AB9669516E5676000984102 /* TrajectoryResults.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AB9669416E5676000984102 /* TrajectoryResults.m */; };
+		8AB9669816E5676F00984102 /* CalibrationFormPage1.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AB9669716E5676F00984102 /* CalibrationFormPage1.m */; };
+		8AB9669B16E5677C00984102 /* CalibrationFormPage2.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AB9669A16E5677C00984102 /* CalibrationFormPage2.m */; };
+		8ABAD64716D2CB2A0041A904 /* WeatherForecastResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ABAD64616D2CB2A0041A904 /* WeatherForecastResponse.m */; };
+		8ABAD64A16D2CC1E0041A904 /* WeatherForecastResults.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ABAD64916D2CC1E0041A904 /* WeatherForecastResults.m */; };
+		8ABCE3C816D1F0D3008FA189 /* WeatherForecastDateInputForm.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ABCE3C716D1F0D3008FA189 /* WeatherForecastDateInputForm.m */; };
+		8ABCE3CB16D1F595008FA189 /* WeatherRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ABCE3CA16D1F595008FA189 /* WeatherRequest.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8AB6984516C84F560007AD8B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8AB6981216C84F550007AD8B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8AB6981916C84F550007AD8B;
+			remoteInfo = HuntersAssistant;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8A081F9D16C9858300423D16 /* WeatherForecastLocationForm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherForecastLocationForm.h; sourceTree = "<group>"; };
+		8A081F9E16C9858300423D16 /* WeatherForecastLocationForm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherForecastLocationForm.m; sourceTree = "<group>"; };
+		8A0F4D1616D702340047A22D /* GunProfileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GunProfileManager.h; sourceTree = "<group>"; };
+		8A0F4D1716D702340047A22D /* GunProfileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GunProfileManager.m; sourceTree = "<group>"; };
+		8A0F4D1916D702610047A22D /* AddEditGunProfileForm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddEditGunProfileForm.h; sourceTree = "<group>"; };
+		8A0F4D1A16D702610047A22D /* AddEditGunProfileForm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddEditGunProfileForm.m; sourceTree = "<group>"; };
+		8A0F4D1C16D714B00047A22D /* XMLFileFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLFileFunctions.h; sourceTree = "<group>"; };
+		8A0F4D1D16D714B00047A22D /* XMLFileFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLFileFunctions.m; sourceTree = "<group>"; };
+		8A78558316D6D9790002BF64 /* GunProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GunProfile.h; sourceTree = "<group>"; };
+		8A78558416D6D9790002BF64 /* GunProfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GunProfile.m; sourceTree = "<group>"; };
+		8A79D81C16D334620056F400 /* DayForecast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DayForecast.h; sourceTree = "<group>"; };
+		8A79D81D16D334620056F400 /* DayForecast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DayForecast.m; sourceTree = "<group>"; };
+		8A79D81F16D37E3F0056F400 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		8A8015B316DC2CFE0094418C /* WeatherForecastResultsTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherForecastResultsTable.h; sourceTree = "<group>"; };
+		8A8015B416DC2CFE0094418C /* WeatherForecastResultsTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherForecastResultsTable.m; sourceTree = "<group>"; };
+		8AB6981A16C84F560007AD8B /* HuntersAssistantIPhone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HuntersAssistantIPhone.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8AB6981D16C84F560007AD8B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		8AB6981F16C84F560007AD8B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		8AB6982116C84F560007AD8B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		8AB6982516C84F560007AD8B /* HuntersAssistantIPhone-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HuntersAssistantIPhone-Info.plist"; sourceTree = "<group>"; };
+		8AB6982716C84F560007AD8B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8AB6982916C84F560007AD8B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8AB6982B16C84F560007AD8B /* HuntersAssistantIPhone-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HuntersAssistantIPhone-Prefix.pch"; sourceTree = "<group>"; };
+		8AB6982C16C84F560007AD8B /* HuntersAssistantAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HuntersAssistantAppDelegate.h; sourceTree = "<group>"; };
+		8AB6982D16C84F560007AD8B /* HuntersAssistantAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HuntersAssistantAppDelegate.m; sourceTree = "<group>"; };
+		8AB6982F16C84F560007AD8B /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		8AB6983116C84F560007AD8B /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		8AB6983316C84F560007AD8B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		8AB6983616C84F560007AD8B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		8AB6983816C84F560007AD8B /* HuntersAssistantViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HuntersAssistantViewController.h; sourceTree = "<group>"; };
+		8AB6983916C84F560007AD8B /* HuntersAssistantViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HuntersAssistantViewController.m; sourceTree = "<group>"; };
+		8AB6984016C84F560007AD8B /* HuntersAssistantIPhoneTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HuntersAssistantIPhoneTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8AB6984116C84F560007AD8B /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		8AB6984916C84F560007AD8B /* HuntersAssistantIPhoneTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HuntersAssistantIPhoneTests-Info.plist"; sourceTree = "<group>"; };
+		8AB6984B16C84F560007AD8B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8AB6984D16C84F560007AD8B /* HuntersAssistantTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HuntersAssistantTests.h; sourceTree = "<group>"; };
+		8AB6984E16C84F560007AD8B /* HuntersAssistantTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HuntersAssistantTests.m; sourceTree = "<group>"; };
+		8AB9668D16E5174300984102 /* TrajectoryCalculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrajectoryCalculator.h; sourceTree = "<group>"; };
+		8AB9668E16E5174300984102 /* TrajectoryCalculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrajectoryCalculator.m; sourceTree = "<group>"; };
+		8AB9669016E5674E00984102 /* TrajectoryForm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrajectoryForm.h; sourceTree = "<group>"; };
+		8AB9669116E5674E00984102 /* TrajectoryForm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrajectoryForm.m; sourceTree = "<group>"; };
+		8AB9669316E5676000984102 /* TrajectoryResults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrajectoryResults.h; sourceTree = "<group>"; };
+		8AB9669416E5676000984102 /* TrajectoryResults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrajectoryResults.m; sourceTree = "<group>"; };
+		8AB9669616E5676F00984102 /* CalibrationFormPage1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalibrationFormPage1.h; sourceTree = "<group>"; };
+		8AB9669716E5676F00984102 /* CalibrationFormPage1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalibrationFormPage1.m; sourceTree = "<group>"; };
+		8AB9669916E5677C00984102 /* CalibrationFormPage2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalibrationFormPage2.h; sourceTree = "<group>"; };
+		8AB9669A16E5677C00984102 /* CalibrationFormPage2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalibrationFormPage2.m; sourceTree = "<group>"; };
+		8ABAD64516D2CB2A0041A904 /* WeatherForecastResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherForecastResponse.h; sourceTree = "<group>"; };
+		8ABAD64616D2CB2A0041A904 /* WeatherForecastResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherForecastResponse.m; sourceTree = "<group>"; };
+		8ABAD64816D2CC1E0041A904 /* WeatherForecastResults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherForecastResults.h; sourceTree = "<group>"; };
+		8ABAD64916D2CC1E0041A904 /* WeatherForecastResults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherForecastResults.m; sourceTree = "<group>"; };
+		8ABCE3C616D1F0D3008FA189 /* WeatherForecastDateInputForm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherForecastDateInputForm.h; sourceTree = "<group>"; };
+		8ABCE3C716D1F0D3008FA189 /* WeatherForecastDateInputForm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherForecastDateInputForm.m; sourceTree = "<group>"; };
+		8ABCE3C916D1F595008FA189 /* WeatherRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherRequest.h; sourceTree = "<group>"; };
+		8ABCE3CA16D1F595008FA189 /* WeatherRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherRequest.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8AB6981716C84F550007AD8B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A79D82016D37E3F0056F400 /* CoreLocation.framework in Frameworks */,
+				8AB6981E16C84F560007AD8B /* UIKit.framework in Frameworks */,
+				8AB6982016C84F560007AD8B /* Foundation.framework in Frameworks */,
+				8AB6982216C84F560007AD8B /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8AB6983C16C84F560007AD8B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8AB6984216C84F560007AD8B /* SenTestingKit.framework in Frameworks */,
+				8AB6984316C84F560007AD8B /* UIKit.framework in Frameworks */,
+				8AB6984416C84F560007AD8B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8AB6981116C84F550007AD8B = {
+			isa = PBXGroup;
+			children = (
+				8AB6982316C84F560007AD8B /* HuntersAssistant */,
+				8AB6984716C84F560007AD8B /* HuntersAssistantTests */,
+				8AB6981C16C84F560007AD8B /* Frameworks */,
+				8AB6981B16C84F560007AD8B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8AB6981B16C84F560007AD8B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8AB6981A16C84F560007AD8B /* HuntersAssistantIPhone.app */,
+				8AB6984016C84F560007AD8B /* HuntersAssistantIPhoneTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8AB6981C16C84F560007AD8B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8A79D81F16D37E3F0056F400 /* CoreLocation.framework */,
+				8AB6981D16C84F560007AD8B /* UIKit.framework */,
+				8AB6981F16C84F560007AD8B /* Foundation.framework */,
+				8AB6982116C84F560007AD8B /* CoreGraphics.framework */,
+				8AB6984116C84F560007AD8B /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8AB6982316C84F560007AD8B /* HuntersAssistant */ = {
+			isa = PBXGroup;
+			children = (
+				8AB6982C16C84F560007AD8B /* HuntersAssistantAppDelegate.h */,
+				8AB6982D16C84F560007AD8B /* HuntersAssistantAppDelegate.m */,
+				8AB6983516C84F560007AD8B /* MainStoryboard.storyboard */,
+				8AB6983816C84F560007AD8B /* HuntersAssistantViewController.h */,
+				8AB6983916C84F560007AD8B /* HuntersAssistantViewController.m */,
+				8AB6982416C84F560007AD8B /* Supporting Files */,
+				8A081F9D16C9858300423D16 /* WeatherForecastLocationForm.h */,
+				8A081F9E16C9858300423D16 /* WeatherForecastLocationForm.m */,
+				8ABCE3C616D1F0D3008FA189 /* WeatherForecastDateInputForm.h */,
+				8ABCE3C716D1F0D3008FA189 /* WeatherForecastDateInputForm.m */,
+				8ABCE3C916D1F595008FA189 /* WeatherRequest.h */,
+				8ABCE3CA16D1F595008FA189 /* WeatherRequest.m */,
+				8ABAD64516D2CB2A0041A904 /* WeatherForecastResponse.h */,
+				8ABAD64616D2CB2A0041A904 /* WeatherForecastResponse.m */,
+				8ABAD64816D2CC1E0041A904 /* WeatherForecastResults.h */,
+				8ABAD64916D2CC1E0041A904 /* WeatherForecastResults.m */,
+				8A79D81C16D334620056F400 /* DayForecast.h */,
+				8A79D81D16D334620056F400 /* DayForecast.m */,
+				8A78558316D6D9790002BF64 /* GunProfile.h */,
+				8A78558416D6D9790002BF64 /* GunProfile.m */,
+				8A0F4D1616D702340047A22D /* GunProfileManager.h */,
+				8A0F4D1716D702340047A22D /* GunProfileManager.m */,
+				8A0F4D1916D702610047A22D /* AddEditGunProfileForm.h */,
+				8A0F4D1A16D702610047A22D /* AddEditGunProfileForm.m */,
+				8A0F4D1C16D714B00047A22D /* XMLFileFunctions.h */,
+				8A0F4D1D16D714B00047A22D /* XMLFileFunctions.m */,
+				8A8015B316DC2CFE0094418C /* WeatherForecastResultsTable.h */,
+				8A8015B416DC2CFE0094418C /* WeatherForecastResultsTable.m */,
+				8AB9668D16E5174300984102 /* TrajectoryCalculator.h */,
+				8AB9668E16E5174300984102 /* TrajectoryCalculator.m */,
+				8AB9669016E5674E00984102 /* TrajectoryForm.h */,
+				8AB9669116E5674E00984102 /* TrajectoryForm.m */,
+				8AB9669316E5676000984102 /* TrajectoryResults.h */,
+				8AB9669416E5676000984102 /* TrajectoryResults.m */,
+				8AB9669616E5676F00984102 /* CalibrationFormPage1.h */,
+				8AB9669716E5676F00984102 /* CalibrationFormPage1.m */,
+				8AB9669916E5677C00984102 /* CalibrationFormPage2.h */,
+				8AB9669A16E5677C00984102 /* CalibrationFormPage2.m */,
+			);
+			path = HuntersAssistant;
+			sourceTree = "<group>";
+		};
+		8AB6982416C84F560007AD8B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8AB6982516C84F560007AD8B /* HuntersAssistantIPhone-Info.plist */,
+				8AB6982616C84F560007AD8B /* InfoPlist.strings */,
+				8AB6982916C84F560007AD8B /* main.m */,
+				8AB6982B16C84F560007AD8B /* HuntersAssistantIPhone-Prefix.pch */,
+				8AB6982F16C84F560007AD8B /* Default.png */,
+				8AB6983116C84F560007AD8B /* Default@2x.png */,
+				8AB6983316C84F560007AD8B /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8AB6984716C84F560007AD8B /* HuntersAssistantTests */ = {
+			isa = PBXGroup;
+			children = (
+				8AB6984D16C84F560007AD8B /* HuntersAssistantTests.h */,
+				8AB6984E16C84F560007AD8B /* HuntersAssistantTests.m */,
+				8AB6984816C84F560007AD8B /* Supporting Files */,
+			);
+			path = HuntersAssistantTests;
+			sourceTree = "<group>";
+		};
+		8AB6984816C84F560007AD8B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8AB6984916C84F560007AD8B /* HuntersAssistantIPhoneTests-Info.plist */,
+				8AB6984A16C84F560007AD8B /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8AB6981916C84F550007AD8B /* HuntersAssistantIPhone */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8AB6985216C84F560007AD8B /* Build configuration list for PBXNativeTarget "HuntersAssistantIPhone" */;
+			buildPhases = (
+				8AB6981616C84F550007AD8B /* Sources */,
+				8AB6981716C84F550007AD8B /* Frameworks */,
+				8AB6981816C84F550007AD8B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HuntersAssistantIPhone;
+			productName = HuntersAssistant;
+			productReference = 8AB6981A16C84F560007AD8B /* HuntersAssistantIPhone.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8AB6983F16C84F560007AD8B /* HuntersAssistantIPhoneTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8AB6985516C84F560007AD8B /* Build configuration list for PBXNativeTarget "HuntersAssistantIPhoneTests" */;
+			buildPhases = (
+				8AB6983B16C84F560007AD8B /* Sources */,
+				8AB6983C16C84F560007AD8B /* Frameworks */,
+				8AB6983D16C84F560007AD8B /* Resources */,
+				8AB6983E16C84F560007AD8B /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8AB6984616C84F560007AD8B /* PBXTargetDependency */,
+			);
+			name = HuntersAssistantIPhoneTests;
+			productName = HuntersAssistantTests;
+			productReference = 8AB6984016C84F560007AD8B /* HuntersAssistantIPhoneTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8AB6981216C84F550007AD8B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = HuntersAssistant;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Jerran Simpson";
+			};
+			buildConfigurationList = 8AB6981516C84F550007AD8B /* Build configuration list for PBXProject "HuntersAssistantIPhone" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 8AB6981116C84F550007AD8B;
+			productRefGroup = 8AB6981B16C84F560007AD8B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8AB6981916C84F550007AD8B /* HuntersAssistantIPhone */,
+				8AB6983F16C84F560007AD8B /* HuntersAssistantIPhoneTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8AB6981816C84F550007AD8B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8AB6982816C84F560007AD8B /* InfoPlist.strings in Resources */,
+				8AB6983016C84F560007AD8B /* Default.png in Resources */,
+				8AB6983216C84F560007AD8B /* Default@2x.png in Resources */,
+				8AB6983416C84F560007AD8B /* Default-568h@2x.png in Resources */,
+				8AB6983716C84F560007AD8B /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8AB6983D16C84F560007AD8B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8AB6984C16C84F560007AD8B /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8AB6983E16C84F560007AD8B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8AB6981616C84F550007AD8B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8AB6982A16C84F560007AD8B /* main.m in Sources */,
+				8AB6982E16C84F560007AD8B /* HuntersAssistantAppDelegate.m in Sources */,
+				8AB6983A16C84F560007AD8B /* HuntersAssistantViewController.m in Sources */,
+				8A081F9F16C9858300423D16 /* WeatherForecastLocationForm.m in Sources */,
+				8ABCE3C816D1F0D3008FA189 /* WeatherForecastDateInputForm.m in Sources */,
+				8ABCE3CB16D1F595008FA189 /* WeatherRequest.m in Sources */,
+				8ABAD64716D2CB2A0041A904 /* WeatherForecastResponse.m in Sources */,
+				8ABAD64A16D2CC1E0041A904 /* WeatherForecastResults.m in Sources */,
+				8A79D81E16D334620056F400 /* DayForecast.m in Sources */,
+				8A78558516D6D9790002BF64 /* GunProfile.m in Sources */,
+				8A0F4D1816D702340047A22D /* GunProfileManager.m in Sources */,
+				8A0F4D1B16D702610047A22D /* AddEditGunProfileForm.m in Sources */,
+				8A0F4D1E16D714B10047A22D /* XMLFileFunctions.m in Sources */,
+				8A8015B516DC2CFE0094418C /* WeatherForecastResultsTable.m in Sources */,
+				8AB9668F16E5174300984102 /* TrajectoryCalculator.m in Sources */,
+				8AB9669216E5674E00984102 /* TrajectoryForm.m in Sources */,
+				8AB9669516E5676000984102 /* TrajectoryResults.m in Sources */,
+				8AB9669816E5676F00984102 /* CalibrationFormPage1.m in Sources */,
+				8AB9669B16E5677C00984102 /* CalibrationFormPage2.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8AB6983B16C84F560007AD8B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8AB6984F16C84F560007AD8B /* HuntersAssistantTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8AB6984616C84F560007AD8B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8AB6981916C84F550007AD8B /* HuntersAssistantIPhone */;
+			targetProxy = 8AB6984516C84F560007AD8B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8AB6982616C84F560007AD8B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8AB6982716C84F560007AD8B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		8AB6983516C84F560007AD8B /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8AB6983616C84F560007AD8B /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+		8AB6984A16C84F560007AD8B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8AB6984B16C84F560007AD8B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8AB6985016C84F560007AD8B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		8AB6985116C84F560007AD8B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8AB6985316C84F560007AD8B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HuntersAssistant/HuntersAssistantIPhone-Prefix.pch";
+				INFOPLIST_FILE = "HuntersAssistant/HuntersAssistantIPhone-Info.plist";
+				PRODUCT_NAME = HuntersAssistantIPhone;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		8AB6985416C84F560007AD8B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HuntersAssistant/HuntersAssistantIPhone-Prefix.pch";
+				INFOPLIST_FILE = "HuntersAssistant/HuntersAssistantIPhone-Info.plist";
+				PRODUCT_NAME = HuntersAssistantIPhone;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		8AB6985616C84F560007AD8B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/HuntersAssistant.app/HuntersAssistant";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HuntersAssistant/HuntersAssistant-Prefix.pch";
+				INFOPLIST_FILE = "HuntersAssistantTests/HuntersAssistantIPhoneTests-Info.plist";
+				PRODUCT_NAME = HuntersAssistantIPhoneTests;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		8AB6985716C84F560007AD8B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/HuntersAssistant.app/HuntersAssistant";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HuntersAssistant/HuntersAssistant-Prefix.pch";
+				INFOPLIST_FILE = "HuntersAssistantTests/HuntersAssistantIPhoneTests-Info.plist";
+				PRODUCT_NAME = HuntersAssistantIPhoneTests;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8AB6981516C84F550007AD8B /* Build configuration list for PBXProject "HuntersAssistantIPhone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8AB6985016C84F560007AD8B /* Debug */,
+				8AB6985116C84F560007AD8B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8AB6985216C84F560007AD8B /* Build configuration list for PBXNativeTarget "HuntersAssistantIPhone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8AB6985316C84F560007AD8B /* Debug */,
+				8AB6985416C84F560007AD8B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8AB6985516C84F560007AD8B /* Build configuration list for PBXNativeTarget "HuntersAssistantIPhoneTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8AB6985616C84F560007AD8B /* Debug */,
+				8AB6985716C84F560007AD8B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8AB6981216C84F550007AD8B /* Project object */;
+}

@@ -1,0 +1,385 @@
+//
+//  WeatherForecastResultsTable.m
+//  HuntersAssistantIPhone
+//
+//  Created by Jerran Simpson on 2/25/13.
+//  Copyright (c) 2013 Jerran Simpson. All rights reserved.
+//
+
+#import "WeatherForecastResultsTable.h"
+#import "WeatherForecastResults.h"
+
+@interface WeatherForecastResultsTable ()
+
+@end
+
+@implementation WeatherForecastResultsTable
+
+@synthesize forecasts;
+@synthesize response;
+@synthesize request;
+
+NSString *responseString;
+NSMutableData* responseData;
+NSMutableString* currentName;
+NSString* currentElement;
+WeatherForecastResults *destination;
+DayForecast* forecast;
+
+
+- (id)initWithStyle:(UITableViewStyle)style
+{
+    self = [super initWithStyle:style];
+    if (self) {
+
+    }
+    return self;
+}
+
+- (id)init
+{
+    self = [super init];
+    if(self)
+    {
+    }
+    return self;
+}
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    response = [WeatherForecastResponse alloc];
+    responseData = [NSMutableData new];
+    NSURL* requestURL = [self buildRequestURL:request];
+    responseString = [NSString alloc];
+    responseString = [self sendRequest:requestURL];
+    
+    
+    // Uncomment the following line to preserve selection between presentations.
+    // self.clearsSelectionOnViewWillAppear = NO;
+ 
+    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+}
+
+-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    WeatherForecastResults *destination = [segue destinationViewController];
+    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+    destination.forecast = [forecasts objectAtIndex: indexPath.row];
+}
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - Table view data source
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+#warning Potentially incomplete method implementation.
+    // Return the number of sections.
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+#warning Incomplete method implementation.
+    // Return the number of rows in the section.
+    return [forecasts count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *CellIdentifier = @"Cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    
+    DayForecast *day = [forecasts objectAtIndex:[indexPath row]];
+    NSString *wind;
+    if([day.windSpeedKilometersPerHour doubleValue]<= 11)
+    {
+        wind = @"Wind Speed: low";
+    }
+    else if([day.windSpeedKilometersPerHour doubleValue] > 11 && [day.windSpeedKilometersPerHour doubleValue] <= 38)
+    {
+        wind = @"Wind Speed: medium";
+    }
+    else
+    {
+        wind = @"Wind Speed: high";
+    }
+    NSCalendar* cal = [NSCalendar currentCalendar];
+    NSDate *currentDate = [NSDate date];
+    NSDate *tomorrow = [currentDate dateByAddingTimeInterval:(60*60*24)];
+    NSString* year = [day.date substringWithRange:NSMakeRange(0,4)];
+    NSString* month = [day.date substringWithRange:NSMakeRange(5,2)];
+    NSString* d = [day.date substringWithRange:NSMakeRange(8,2)];
+    NSString* dayMonth = [day.date substringWithRange:NSMakeRange(5,5)];
+    NSDateComponents* components = [[NSDateComponents alloc] init];
+    [components setYear:[year intValue]];
+    [components setMonth:[month intValue]];
+    [components setDay:[d intValue]];
+    NSDate *date = [cal dateFromComponents:components];
+    NSString *text;
+    if([date compare:tomorrow] < 0 && [date compare:currentDate] > 0)
+    {
+        text = @"Tomorrow";
+    }
+    else if([date compare:tomorrow] < 0)
+    {
+        text = @"Today";
+    }
+    else
+    {
+        text = dayMonth;
+    }
+    cell.textLabel.font = [UIFont systemFontOfSize:13.0];
+    text = [text stringByAppendingString:@"\t"];
+    text = [text stringByAppendingString:wind];
+    cell.textLabel.text = text;
+    day.imageData = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString:day.imageURL]];
+    cell.imageView.image =[UIImage imageWithData:day.imageData];
+    NSIndexPath* rowToReload = [NSIndexPath indexPathForRow:[indexPath row] inSection:0];
+    NSArray* rowsToReload = [NSArray arrayWithObjects:rowToReload,nil];
+    [self reloadRowsAtIndexPaths:rowsToReload withRowAnimation:UITableViewRowAnimationNone];
+    
+    return cell;
+}
+
+-(void) reloadRowsAtIndexPaths:(NSArray*) indexPaths withRowAnimation:(UITableViewRowAnimation)animation
+{
+    
+}
+
+/*
+// Override to support conditional editing of the table view.
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    // Return NO if you do not want the specified item to be editable.
+    return YES;
+}
+*/
+
+/*
+// Override to support editing the table view.
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        // Delete the row from the data source
+        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+    }   
+    else if (editingStyle == UITableViewCellEditingStyleInsert) {
+        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+    }   
+}
+*/
+
+/*
+// Override to support rearranging the table view.
+- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
+{
+}
+*/
+
+/*
+// Override to support conditional rearranging of the table view.
+- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    // Return NO if you do not want the item to be re-orderable.
+    return YES;
+}
+*/
+
+#pragma mark - Table view delegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    // Navigation logic may go here. Create and push another view controller.
+    /*
+     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
+     // ...
+     // Pass the selected object to the new view controller.
+     [self.navigationController pushViewController:detailViewController animated:YES];
+     */
+}
+
+- (NSURL*) buildRequestURL: (WeatherRequest*)requestInfo
+{
+    NSString *requestString = [NSString alloc];
+    NSURL *requestURL = [NSURL alloc];
+    requestString = @"http://free.worldweatheronline.com/feed/weather.ashx?q=";
+    if(![requestInfo.zipCode length] == 0)
+    {
+        requestString = [requestString stringByAppendingString:request.zipCode];
+    }
+    else if(!([requestInfo.latitude length] == 0 || [requestInfo.longitude length] == 0))
+    {
+        requestString = [requestString stringByAppendingString:request.latitude];
+        requestString = [requestString stringByAppendingString:@","];
+        requestString = [requestString stringByAppendingString:request.longitude];
+    }
+    else if(!([requestInfo.city length] == 0 || [requestInfo.country length] == 0))
+    {
+        requestString = [requestString stringByAppendingString:request.city];
+        requestString = [requestString stringByAppendingString:@","];
+        requestString = [requestString stringByAppendingString:request.country];
+    }
+    if(!([requestInfo.month length] == 0 || [requestInfo.year length] == 0 || [requestInfo.day length] == 0))
+    {
+        NSString *date = [requestInfo.year stringByAppendingString:@"-"];
+        date = [date stringByAppendingString:requestInfo.month];
+        date = [date stringByAppendingString:@"-"];
+        date = [date stringByAppendingString:requestInfo.day];
+        requestString = [requestString stringByAppendingString:@"&date="];
+        requestString = [requestString stringByAppendingString:date];
+    }
+    else
+    {
+        requestString = [requestString stringByAppendingString:@"&format=xml&num_of_days="];
+        requestString = [requestString stringByAppendingString:request.numberOfDays];
+    }
+    requestString = [requestString stringByAppendingString:@"&key="];
+    requestString = [requestString stringByAppendingString:request.worldWeatherAPIKey];
+    requestString = [requestString stringByReplacingOccurrencesOfString:@" " withString:@"+"];
+    requestURL = [NSURL URLWithString:requestString];
+    return requestURL;
+}
+
+- (NSString *)sendRequest:(NSURL *)url
+{
+    NSMutableURLRequest *requestObject = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:60];
+    [requestObject setHTTPMethod:@"GET"];
+    
+    [[NSURLConnection alloc] initWithRequest:requestObject delegate:self];
+    
+    NSString *result = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
+    return result;
+}
+
+- (void) parseXML
+{
+    NSXMLParser *parser = [[NSXMLParser alloc] initWithData:[responseString dataUsingEncoding:NSUTF8StringEncoding]];
+    [parser setDelegate:self];
+    [parser parse];
+}
+
+-(void)parserDidStartDocument:(NSXMLParser*)parser
+{
+    currentElement = nil;
+}
+
+-(void)parser:(NSXMLParser*)parser didStartElement:(NSString*)elementName namespaceURI:(NSString*)namespaceURI qualifiedName:(NSString*)qualifiedName attributes:(NSDictionary*)attributeDict
+{
+    currentElement = [elementName copy];
+    currentName =[[NSMutableString alloc]init];
+}
+-(void) parser:(NSXMLParser*)parser didEndElement:(NSString*)elementName namespaceURI:(NSString*)namespaceURI qualifiedName:(NSString*)qName
+{
+    
+    if([elementName isEqualToString:@"weatherIconUrl"])
+    {
+        forecast = [DayForecast alloc];
+        forecast.imageURL = currentName;
+    }
+    else if([elementName isEqualToString:@"weatherDesc"])
+    {
+        forecast.weatherDescription = currentName;
+        //        NSLog(@"Date: %@",forecast.date);
+    }
+    else if([elementName isEqualToString:@"windspeedMiles"])
+    {
+        forecast.windSpeedMilesPerHour = currentName;
+        //       NSLog(@"Date: %@",forecast.date);
+    }
+    else if([elementName isEqualToString:@"windspeedKmph"])
+    {
+        forecast.windSpeedKilometersPerHour = currentName;
+        //       NSLog(@"Date: %@",forecast.date);
+    }
+    else if([elementName isEqualToString:@"date"])
+    {
+        forecast.date = currentName;
+        //       NSLog(@"Date: %@",forecast.date);
+    }
+    else if([elementName isEqualToString:@"tempMaxC"])
+    {
+        forecast.maximumTemperatureCelsius = currentName;
+        //       NSLog(@"Date: %@",forecast.date);
+    }
+    else if([elementName isEqualToString:@"tempMaxF"])
+    {
+        forecast.maximumTemperatureFarenheit = currentName;
+        //      NSLog(@"Date: %@",forecast.date);
+    }
+    else if([elementName isEqualToString:@"tempMinC"])
+    {
+        forecast.minimumTemperatureCelsius = currentName;
+        //      NSLog(@"Date: %@",forecast.date);
+    }
+    else if([elementName isEqualToString:@"tempMinF"])
+    {
+        forecast.minimumTemperatureFarenheit = currentName;
+        [response addDay:forecast];
+    }
+}
+
+
+-(void)parser:(NSXMLParser*) parser foundCharacters:(NSString*)string
+{
+    [currentName appendString:string];
+}
+-(void)parser:(NSXMLParser*)parser parseErrorOccurred:(NSError*)parseError
+{
+    NSLog(@"PARSING ERROR");
+}
+
+-(void)parserDidEndDocument:(NSXMLParser*)parser
+{
+    if(response.day5 != nil)
+    {
+        forecasts = [[NSArray alloc] initWithObjects:response.day1, response.day2, response.day3, response.day4, response.day5, nil];
+    }
+    else if(response.day4 != nil)
+    {
+        forecasts = [[NSArray alloc] initWithObjects:response.day1, response.day2, response.day3, response.day4, nil];
+    }
+    else if(response.day3 != nil)
+    {
+        forecasts = [[NSArray alloc] initWithObjects:response.day1, response.day2, response.day3,  nil];
+    }
+    else if(response.day2 != nil)
+    {
+        forecasts = [[NSArray alloc] initWithObjects:response.day1, response.day2, nil];
+    }
+    else
+    {
+        forecasts = [[NSArray alloc] initWithObjects:response.day1, nil];
+    }
+    [self.tableView reloadData];
+    response.count = 0;
+}
+
+
+- (void) connection:(NSURLConnection *) connection didReceiveResonse:(NSURLResponse *)response
+{
+    [responseData setLength:0];
+}
+
+- (void) connection:(NSURLConnection *)connection didReceiveData:(NSData*)data
+{
+    [responseData appendData:data];
+}
+
+-(void) connectionDidFinishLoading:(NSURLConnection *) connection
+{
+    responseString = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
+    [self parseXML];
+}
+-(void) connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
+{
+    NSLog(@"something very bad happened");
+}
+
+@end

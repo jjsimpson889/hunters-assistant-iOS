@@ -1,0 +1,197 @@
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/jsimpson_capstone/!svn/ver/38/HuntersAssistantIPhone/HuntersAssistant
+END
+main.m
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/jsimpson_capstone/!svn/ver/38/HuntersAssistantIPhone/HuntersAssistant/main.m
+END
+Default@2x.png
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/jsimpson_capstone/!svn/ver/38/HuntersAssistantIPhone/HuntersAssistant/Default@2x.png
+END
+WeatherForecastDateInputForm.m
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/jsimpson_capstone/!svn/ver/51/HuntersAssistantIPhone/HuntersAssistant/WeatherForecastDateInputForm.m
+END
+DayForecast.h
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/jsimpson_capstone/!svn/ver/51/HuntersAssistantIPhone/HuntersAssistant/DayForecast.h
+END
+WeatherForecastResponse.h
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/jsimpson_capstone/!svn/ver/45/HuntersAssistantIPhone/HuntersAssistant/WeatherForecastResponse.h
+END
+DayForecast.m
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/jsimpson_capstone/!svn/ver/51/HuntersAssistantIPhone/HuntersAssistant/DayForecast.m
+END
+WeatherForecastResponse.m
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/jsimpson_capstone/!svn/ver/45/HuntersAssistantIPhone/HuntersAssistant/WeatherForecastResponse.m
+END
+AddEditGunProfileForm.h
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/jsimpson_capstone/!svn/ver/51/HuntersAssistantIPhone/HuntersAssistant/AddEditGunProfileForm.h
+END
+WeatherForecastResultsTable.h
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/jsimpson_capstone/!svn/ver/51/HuntersAssistantIPhone/HuntersAssistant/WeatherForecastResultsTable.h
+END
+HuntersAssistantViewController.h
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/jsimpson_capstone/!svn/ver/45/HuntersAssistantIPhone/HuntersAssistant/HuntersAssistantViewController.h
+END
+AddEditGunProfileForm.m
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/jsimpson_capstone/!svn/ver/51/HuntersAssistantIPhone/HuntersAssistant/AddEditGunProfileForm.m
+END
+HuntersAssistantIPhone-Info.plist
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/jsimpson_capstone/!svn/ver/38/HuntersAssistantIPhone/HuntersAssistant/HuntersAssistantIPhone-Info.plist
+END
+WeatherForecastResultsTable.m
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/jsimpson_capstone/!svn/ver/51/HuntersAssistantIPhone/HuntersAssistant/WeatherForecastResultsTable.m
+END
+HuntersAssistantViewController.m
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/jsimpson_capstone/!svn/ver/45/HuntersAssistantIPhone/HuntersAssistant/HuntersAssistantViewController.m
+END
+XMLFileFunctions.h
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/jsimpson_capstone/!svn/ver/49/HuntersAssistantIPhone/HuntersAssistant/XMLFileFunctions.h
+END
+XMLFileFunctions.m
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/jsimpson_capstone/!svn/ver/49/HuntersAssistantIPhone/HuntersAssistant/XMLFileFunctions.m
+END
+HuntersAssistantIPhone-Prefix.pch
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/jsimpson_capstone/!svn/ver/38/HuntersAssistantIPhone/HuntersAssistant/HuntersAssistantIPhone-Prefix.pch
+END
+WeatherForecastLocationForm.h
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/jsimpson_capstone/!svn/ver/45/HuntersAssistantIPhone/HuntersAssistant/WeatherForecastLocationForm.h
+END
+GunProfileManager.h
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/jsimpson_capstone/!svn/ver/51/HuntersAssistantIPhone/HuntersAssistant/GunProfileManager.h
+END
+WeatherRequest.h
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/jsimpson_capstone/!svn/ver/45/HuntersAssistantIPhone/HuntersAssistant/WeatherRequest.h
+END
+WeatherForecastResults.h
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/jsimpson_capstone/!svn/ver/51/HuntersAssistantIPhone/HuntersAssistant/WeatherForecastResults.h
+END
+WeatherForecastLocationForm.m
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/jsimpson_capstone/!svn/ver/51/HuntersAssistantIPhone/HuntersAssistant/WeatherForecastLocationForm.m
+END
+GunProfile.h
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/jsimpson_capstone/!svn/ver/48/HuntersAssistantIPhone/HuntersAssistant/GunProfile.h
+END
+GunProfileManager.m
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/jsimpson_capstone/!svn/ver/49/HuntersAssistantIPhone/HuntersAssistant/GunProfileManager.m
+END
+WeatherRequest.m
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/jsimpson_capstone/!svn/ver/45/HuntersAssistantIPhone/HuntersAssistant/WeatherRequest.m
+END
+WeatherForecastResults.m
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/jsimpson_capstone/!svn/ver/51/HuntersAssistantIPhone/HuntersAssistant/WeatherForecastResults.m
+END
+HuntersAssistantAppDelegate.h
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/jsimpson_capstone/!svn/ver/38/HuntersAssistantIPhone/HuntersAssistant/HuntersAssistantAppDelegate.h
+END
+GunProfile.m
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/jsimpson_capstone/!svn/ver/48/HuntersAssistantIPhone/HuntersAssistant/GunProfile.m
+END
+Default.png
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/jsimpson_capstone/!svn/ver/38/HuntersAssistantIPhone/HuntersAssistant/Default.png
+END
+Default-568h@2x.png
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/jsimpson_capstone/!svn/ver/38/HuntersAssistantIPhone/HuntersAssistant/Default-568h@2x.png
+END
+HuntersAssistantAppDelegate.m
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/jsimpson_capstone/!svn/ver/38/HuntersAssistantIPhone/HuntersAssistant/HuntersAssistantAppDelegate.m
+END
+WeatherForecastDateInputForm.h
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/jsimpson_capstone/!svn/ver/51/HuntersAssistantIPhone/HuntersAssistant/WeatherForecastDateInputForm.h
+END
